@@ -1,8 +1,28 @@
 @import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sedan+SC&display=swap');
 
 #app {
   margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
 }
+/* fonts */
+.title, h1, h2, h3, h4, a{
+  font-family: "Sedan SC", serif;
+}
 
+span{
+  font-family: "Sedan SC", serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+p{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #DBAF6F;
+  line-height: 10px;
+  letter-spacing: 0.8px;
+}
