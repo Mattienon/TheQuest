@@ -94,6 +94,8 @@ h1, a {
   display: flex;
   align-items: center;
   margin-left: 1%;
+  background-color: $primary-purple;
+  border: none;
 }
 
 .lang-pack{
