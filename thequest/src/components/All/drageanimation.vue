@@ -7,7 +7,7 @@
   <script setup>
   import { onMounted, ref } from 'vue';
   import anime from 'animejs/lib/anime.es.js';
-  import dragon from '../assets/drage.mp4';
+  import dragon from '@/assets/Videos/drage.mp4';
   
   const animatedVideo = ref(null);
   
@@ -31,7 +31,7 @@
   
     video {
       position: absolute;
-      top: 0%; /* Center vertically */
+      top: -20%; /* Center vertically */
       left: -100%; /* Start off screen to the left */
       transform: translateY(-50%); /* Center the element by its own height */
       width: 200%; /* Adjust width to maintain aspect ratio */

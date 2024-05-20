@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import gallery from '@/components/gallery.vue';
+import gallery from '@/components/AboutView/gallery.vue';
 
 </script>
 
@@ -28,6 +28,7 @@ import gallery from '@/components/gallery.vue';
   display: flex;
   flex-direction: column;
   padding: 5%;
+  margin-top: -3%;
   margin-bottom: 5rem;
   max-width: 1300px; /* Max width for better layout control */
   border: 10px outset $primary-yellow;

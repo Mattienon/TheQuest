@@ -18,12 +18,11 @@
   
   <script setup>
   import { RouterView } from 'vue-router';
-  import footnav from './components/footnav.vue';
-  import headerlinks from './components/headerlinks.vue';
+  import footnav from '@/components/All/footnav.vue';
+  import headerlinks from '@/components/All/headerlinks.vue';
   import shadowtree from '@/components/shadowtree.vue';
-  import particleeffect from '@/components/particleeffect.vue';
-  import totheTOP from '@/components/Functionality/totheTOP.vue';
-  import drageanimation from '@/components/drageanimation.vue';
+  import totheTOP from './components/All/totheTOP.vue';
+  import drageanimation from './components/All/drageanimation.vue';
   </script>
   
   <style lang="scss" scoped>

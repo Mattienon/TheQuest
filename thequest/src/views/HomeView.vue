@@ -25,11 +25,11 @@
 
 
 <script setup>
-import hero from '@/components/hero.vue';
-import bottomcard from '@/components/bottomcard.vue';
-import logoarea from '@/components/logoarea.vue';
-import infoboxes from '@/components/infoboxes.vue';
-import additionalinfo from '@/components/additionalinfo.vue';
+import hero from '@/components/HomeView/hero.vue';
+import bottomcard from '@/components/HomeView/bottomcard.vue';
+import logoarea from '@/components/HomeView/logoarea.vue';
+import infoboxes from '@/components/HomeView/infoboxes.vue';
+import additionalinfo from '@/components/HomeView/additionalinfo.vue';
 </script>
 
 
@@ -59,7 +59,7 @@ h1, h2 {
   padding-top: 42%;
   padding-bottom: 30%;
   max-width: 1300px; /* Max width for better layout control */
-  margin-top: -45%;
+  margin-top: -48%;
   border: 10px outset $primary-yellow;
   background-color: $primary-purple;
   --notchSize: 15px;
@@ -127,7 +127,7 @@ h1, h2 {
   left: 0;
   width: 100%;
   min-height: 320vh;
-  background: linear-gradient(top to bottom, transparent 70%, black 200%);
+  background: linear-gradient(top to , transparent 70%, black 200%);
 }
   
 </style>

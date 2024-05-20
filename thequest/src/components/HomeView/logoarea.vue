@@ -1,7 +1,7 @@
 <template>
     <div class="video-container">
         <video class="circular-video" controls loop>
-        <source src="@/assets/logoanim.mp4" type="video/mp4">
+        <source src="@/assets/Videos/logoanim.mp4" type="video/mp4">
       </video>
     </div>
   </template>

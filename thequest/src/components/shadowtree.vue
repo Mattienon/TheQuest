@@ -23,7 +23,7 @@
     transform: rotate(105deg);
     opacity: 0.6;
     position: absolute;
-    z-index: 2; /* Lower z-index to ensure it's behind other elements */
+    z-index: 3; /* Lower z-index to ensure it's behind other elements */
     pointer-events: none; /* Ensures the image doesn't block interactions */
   }
   
@@ -40,3 +40,5 @@
   }
   </style>
   
+
+  <!-- if i plop til into ALL the images dissapear -->
