@@ -19,7 +19,7 @@
     </div>
     
     <div class="footerimg">
-      <img src="../assets/Images/raven.svg" alt="Raven Image">
+      <img src="@/assets/Images/raven.svg" alt="Raven Image">
     </div>
   </footer>
 </template>
@@ -103,3 +103,4 @@ const navigationLinks = ref([
 }
 
 </style>
+<!-- once again if i plop this into th All folder the raven disapears -->

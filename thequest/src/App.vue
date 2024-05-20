@@ -18,7 +18,7 @@
   
   <script setup>
   import { RouterView } from 'vue-router';
-  import footnav from '@/components/All/footnav.vue';
+  import footnav from '@/components/footnav.vue';
   import headerlinks from '@/components/All/headerlinks.vue';
   import shadowtree from '@/components/shadowtree.vue';
   import totheTOP from './components/All/totheTOP.vue';

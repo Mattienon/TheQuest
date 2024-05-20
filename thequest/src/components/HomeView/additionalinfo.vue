@@ -1,7 +1,6 @@
-// MainComponent.vue
 <template>
   <div class="container">
-    <h1 >Extra aktiviteter</h1>
+    <h1>Extra aktiviteter</h1>
     <p>Oplev extra aktiviteter i forlængelse af din Quest</p>
     <div class="row">
       <div class="col-md-4" v-for="(card, index) in cards" :key="index">
@@ -17,6 +16,7 @@
 
 <script>
 import CardComponent from './CardComponent.vue';
+import card1 from '@/assets/Images/elf.jpg'
 
 export default {
   name: 'MainComponent',
@@ -27,17 +27,17 @@ export default {
     return {
       cards: [
         {
-          imgSrc: 'https://via.placeholder.com/150',
+          imgSrc: card1,
           title: 'Bar & By',
           description: 'Efter din Questen åbner dronning Louise drinks der smager af eventyr '
         },
         {
-          imgSrc: 'https://via.placeholder.com/150',
+          imgSrc: card1,
           title: 'Fantasy Festival',
           description: 'This is the description for card 2.'
         },
         {
-          imgSrc: 'https://via.placeholder.com/150',
+          imgSrc: card1,
           title: 'Noget Tredje',
           description: 'This is the description for card 3.'
         }
@@ -49,14 +49,18 @@ export default {
 
 <style scoped>
 @import '@/assets/hexcolors.scss';
+
 .container {
   padding: 20px;
   text-align: center;
 }
 
+h1 {
+  color: $primary-yellow;
+}
 
-.card{
-  border-radius: 2px;
+.card {
+  border-radius: 5px;
   border: none;
 }
 </style>

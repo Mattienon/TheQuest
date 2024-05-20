@@ -27,11 +27,11 @@
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 20vh;
+    height: 15vh;
+    margin-bottom: 2%;
   
     video {
       position: absolute;
-      top: -20%; /* Center vertically */
       left: -100%; /* Start off screen to the left */
       transform: translateY(-50%); /* Center the element by its own height */
       width: 200%; /* Adjust width to maintain aspect ratio */
