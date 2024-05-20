@@ -42,9 +42,8 @@ const navigationLinks = ref([
   flex-direction: column;
   background-color: $primary-green;
   position: relative;
-  margin-top: 5%;
   /* Clip only the bottom 20px */
-  clip-path: inset(-100% 0px 20px 0px)
+  clip-path: inset(-100% 0px 0px 0px)
   
 }
 
@@ -52,8 +51,7 @@ const navigationLinks = ref([
   width: 90%;
   padding-left: 5%;
   margin-top: 3%;
-  padding-bottom: 1%;
-  margin-bottom: 3%;
+
 }
 
 // copyright & privacy policy footer element
@@ -87,11 +85,8 @@ const navigationLinks = ref([
 
 .btn {
   border-radius: 50px;
-  padding: auto;
   width: 10%;
-  height: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 1%;
   background-color: $primary-yellow;
@@ -100,11 +95,11 @@ const navigationLinks = ref([
 
 // footer image with raven
 .footerimg {
-  width: 400px;
+  width: 380px;
   position: absolute;
-  right: 10%;
-  bottom: -10%; /* Adjusted to 0 to align with the bottom */
-  z-index: 1000;
+  right: 8%;
+  bottom: 0%;
+  z-index: 1;
 }
 
 </style>

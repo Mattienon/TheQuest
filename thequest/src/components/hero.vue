@@ -1,28 +1,42 @@
 <template>
     <div>
-      <div class="card">
+      <div class="card" @mouseover="cardHover(true)" @mouseleave="cardHover(false)">
         <div class="cardtitle">
-            <h1>iygiuehh</h1>
-            <div class="cardcontent">
-                <h2>iufhrudfjghjoerthgouheto</h2>
-                <p>iufherihguerh</p>
-                <div class="btn btn-dark">
-                    <a href=""><span>retegetg</span></a>
-                </div>
-            </div>
+          <h1>Velkommen til Questen</h1>
+        </div>
+        <div class="cardcontent">
+          <h2>Kan du løse gåderne?</h2>
+          <p>Fantasy Festival Quest i samabejde med Dystopia</p>
+          <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)">
+            <a href=""><span>Køb billet</span></a>
+          </div>
         </div>
       </div>
     </div>
-</template>
+  </template>
+  
+  <script setup>
+  import { ref } from 'vue';
 
-<script setup>
-</script>
+  </script>
+  
+  <style lang="scss" scoped>
+  @import '@/assets/hexcolors.scss';
+  
+    h2{
+     padding-bottom: 1rem;
+    }
 
-<style lang="scss" scoped>
-@import '@/assets/hexcolors.scss';
-
-
-.card {
+  a {
+    text-decoration: none;
+    color: $primary-yellow;
+    font-weight: bold;
+  }
+  a:hover {
+    color: black;
+  }
+  
+  .card {
     background-color: $light-purple;
     height: 350px;
     outline: none;
@@ -30,6 +44,22 @@
     text-align: center;
     display: flex;
     justify-content: center;
-}
-</style>
-<!-- idk why box shadown aint showing up -->
+    transition: box-shadow 0.3s ease; /* Add transition for box-shadow */
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+  }
+  
+  .btn {
+    margin-top: 2%;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: $primary-purple;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for background-color and transform */
+  }
+  
+  .btn:hover {
+    background-color: lighten($primary-green, 10%);
+    transform: translateY(-5px); /* Move button to the left on hover */
+  }
+  </style>
+  

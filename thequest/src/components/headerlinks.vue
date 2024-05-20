@@ -1,52 +1,48 @@
 <template>
-  <header class="sticky-header">
-    <router-link to="/" class="logo">
-      <h1 class="logo">{{ brandName }}</h1>
-      <hr class="vertical-line">
-      <div class="additional-info">
-        <span>{{ eventDate }}</span>
-        <span>{{ eventLocation }}</span>
-      </div>
-    </router-link>
-    <nav class="navbar">  
-      <!-- basic navigation -->
-      <div class="navigation-links">
-        <router-link
-          v-for="(link, index) in navigationLinks"
-          :key="index"
-          :to="link.path"
-          class="nav-link"
-        >{{ link.text }}</router-link>
-      </div>
-      <!-- button to buy tickets -->
-      <div class="btn btn-dark"> 
-        <a href="tickets">{{ ticketText }}</a>
-      </div>
-      <!-- language changes -->
-          <!-- <div class="lang-pack">
-          <span class="language">DA</span>
-          <hr class="vertical-line">
-          <span class="language">DA</span>
-          <hr class="vertical-line">
-          <span class="language">DA</span>
-        </div> -->
-    </nav>
-  </header>
+  <div>
+    <header class="sticky-header">
+      <router-link to="/" class="logo" @mouseover="logoHover(true)" @mouseleave="logoHover(false)">
+        <h1 class="logo">{{ brandName }}</h1>
+        <hr class="vertical-line" :class="{ 'vertical-line-hover': isLogoHovered }">
+        <div class="additional-info">
+          <span>{{ eventDate }}</span>
+          <span>{{ eventLocation }}</span>
+        </div>
+      </router-link>
+      
+      <nav class="navbar">  
+        <div class="navigation-links">
+          
+          <router-link
+            v-for="(link, index) in navigationLinks"
+            :key="index"
+            :to="link.path"
+            class="nav-link"
+          >{{ link.text }}</router-link>
+        </div>
+        <!-- button to buy tickets -->
+        <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)"> 
+          <a href="tickets">{{ ticketText }}</a>
+        </div>
+      </nav>
+    </header>
+  </div>
 </template>
 
 <script setup>
 import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
-// dynamic info
+
 const brandName = ref("QUEST");
 const eventDate = ref('15 - 16 .Sep 2024');
 const eventLocation = ref('Esbjerg torvet');
 const ticketText = ref ('Køb billet')
-// navigation paths & names
+
 const navigationLinks = ref([
   { path: '/', text: 'QUEST' },
   { path: '/About', text: 'GALLERI'}
 ]);
+
 </script>
 
 <style lang="scss" scoped>
@@ -57,13 +53,20 @@ const navigationLinks = ref([
   top: 0;
   background-color: transparent;   
   display: flex;
-  z-index: 1;
-  
+  z-index: 2;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 
 .logo {
-  display: flex; /* Make the logo and additional info flex containers */
-  align-items: center; /* Align items vertically */
+  display: flex; 
+  align-items: center; 
 }
 
 h1, a {
@@ -73,9 +76,9 @@ h1, a {
 }
 
 .vertical-line {
-  border-left: 2px solid $primary-yellow; /* Adjust thickness and color as needed */
-  height: 35px; /* Adjust height as needed */
-  margin-left: 10px; /* Add margin between brand name and vertical line */
+  border-left: 2px solid $primary-yellow;
+  height: 35px; 
+  margin-left: 10px; 
 }
 
 .additional-info {
@@ -98,16 +101,6 @@ h1, a {
   border: none;
 }
 
-.lang-pack{
-  display: flex;
-  align-items: center;
-  margin-left: 1%;
-
-  .language{
-    margin-left: 5px;
-    margin-right: 0px;
-  }
-}
 .navbar {
   display: flex;
   justify-content: flex-end;
@@ -123,5 +116,17 @@ h1, a {
 
 .navigation-links {
   display: flex;
+}
+
+.vertical-line-hover {
+  border-color: lighten($primary-yellow, 20%); 
+}
+
+.logo:hover {
+  transform: scale(1.05); 
+}
+
+.btn:hover {
+  background-color: lighten($primary-purple, 10%); 
 }
 </style>

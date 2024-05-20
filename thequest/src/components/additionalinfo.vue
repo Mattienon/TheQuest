@@ -1,8 +1,8 @@
 // MainComponent.vue
 <template>
   <div class="container">
-    <h1 class="my-4">Main Title</h1>
-    <p class="mb-4">This is the main description for the cards section.</p>
+    <h1 >Extra aktiviteter</h1>
+    <p>Oplev extra aktiviteter i forlængelse af din Quest</p>
     <div class="row">
       <div class="col-md-4" v-for="(card, index) in cards" :key="index">
         <CardComponent
@@ -28,17 +28,17 @@ export default {
       cards: [
         {
           imgSrc: 'https://via.placeholder.com/150',
-          title: 'Card 1 Title',
-          description: 'This is the description for card 1.'
+          title: 'Bar & By',
+          description: 'Efter din Questen åbner dronning Louise drinks der smager af eventyr '
         },
         {
           imgSrc: 'https://via.placeholder.com/150',
-          title: 'Card 2 Title',
+          title: 'Fantasy Festival',
           description: 'This is the description for card 2.'
         },
         {
           imgSrc: 'https://via.placeholder.com/150',
-          title: 'Card 3 Title',
+          title: 'Noget Tredje',
           description: 'This is the description for card 3.'
         }
       ]
@@ -48,7 +48,15 @@ export default {
 </script>
 
 <style scoped>
+@import '@/assets/hexcolors.scss';
 .container {
   padding: 20px;
+  text-align: center;
+}
+
+
+.card{
+  border-radius: 2px;
+  border: none;
 }
 </style>

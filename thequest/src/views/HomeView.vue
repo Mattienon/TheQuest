@@ -1,14 +1,16 @@
 <template>
-  <div class="body">
+  <div class="body">  
+    <div class="mist"></div>
+  
     <header class="hero-position">
       <hero />
     </header>
-   
-    <main class="outerim"> 
-
-      <section class="cirkelarea">
+     <section class="cirkelarea">
       <logoarea />
       </section>
+    <main class="outerim"> 
+
+    
 
       <div class="boxcontent">
         <infoboxes />
@@ -54,10 +56,10 @@ h1, h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 20%;
+  padding-top: 42%;
   padding-bottom: 30%;
-  max-width: 1200px; /* Max width for better layout control */
-  margin-top: -25%;
+  max-width: 1300px; /* Max width for better layout control */
+  margin-top: -45%;
   border: 10px outset $primary-yellow;
   background-color: $primary-purple;
   --notchSize: 15px;
@@ -77,16 +79,19 @@ h1, h2 {
 }
 
 .hero-position{
+  padding-top: 5%;
   width: 120%;
   max-width: 1500px; /* Max width for better layout control */
   z-index: 1;
-  padding-top: 5%;
 }
 
 .cirkelarea{
-  z-index: 2;
   display: flex;
   justify-content: center;
+  align-items: center;
+  z-index: 2;
+  margin-top: -4%;
+  padding: 2%;
 }
 
 .boxcontent {
@@ -99,7 +104,7 @@ h1, h2 {
 .bottom-position{
   width: 120%;
   max-width: 1500px; /* Max width for better layout control */
-  z-index: 1;
+  z-index: 0;
   margin-top: -25%;
   padding-bottom: 8%;
 }
@@ -114,4 +119,15 @@ h1, h2 {
     --notchSize: 10px; /* Smaller notch size on mobile */
   }
 }
+
+
+.mist {
+  position: absolute; /* Position the dark mist overlay absolute to cover the body */
+  top: -20%;
+  left: 0;
+  width: 100%;
+  min-height: 320vh;
+  background: linear-gradient(top to bottom, transparent 70%, black 200%);
+}
+  
 </style>

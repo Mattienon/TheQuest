@@ -78,7 +78,7 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 150%;
     justify-content: space-around;
   }
   
@@ -97,7 +97,7 @@
     position: relative;
     width: 100%;
     border: none;
-    border-radius: 40px;
+    border-radius: 30px;
     background-color: #8e44ad; /* Example color */
     color: #fff; /* Example color */
     padding: 20px;
@@ -118,6 +118,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 10000;
   }
   
   .button-group1 {
@@ -139,6 +140,34 @@
     padding: 5px 15px;
     width: 125%;
   }
+
+//microinteractions
+.card:hover {
+  transform: scale(1.02); /* Scale up on hover */
+}
+
+.btn:hover {
+  background-color: darken($primary-green, 10%); /* Darken button color on hover */
+}
+
+.card1 {
+  transition: transform 0.3s ease;
+}
+
+.card2 {
+  transition: transform 0.3s ease;
+}
+
+.button-group1,
+.button-group2 {
+  transition: transform 0.3s ease;
+}
+
+.button-group1:hover,
+.button-group2:hover {
+  transform: translateY(-5px); /* Move button group up on hover */
+}
+
   
   @media (max-width: 768px) {
     .col {
