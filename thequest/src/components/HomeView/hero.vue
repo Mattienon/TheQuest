@@ -16,7 +16,6 @@
   </template>
   
   <script setup>
-  import { ref } from 'vue';
 
   </script>
   
@@ -44,8 +43,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
-    transition: box-shadow 0.3s ease; /* Add transition for box-shadow */
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+    align-items: center; /* Align items vertically */
   }
   
   .btn {

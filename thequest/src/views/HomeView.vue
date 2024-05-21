@@ -1,28 +1,24 @@
 <template>
-  <div class="body">  
-    <div class="mist"></div>
-  
+  <outerim/>
+  <div class="body">   
     <header class="hero-position">
       <hero />
     </header>
-     <section class="cirkelarea">
-      <logoarea />
+
+    <div class="boxcontent">
+      <section class="cirkelarea">
+        <logoarea />
       </section>
-    <main class="outerim"> 
-
+      <infoboxes />
+    </div>
     
+    <additionalinfo/> 
 
-      <div class="boxcontent">
-        <infoboxes />
-      </div>
-      <additionalinfo/>
-    </main>
     <div class="bottom-position">
       <bottomcard/>
     </div>
   </div>
 </template>
-
 
 <script setup>
 import hero from '@/components/HomeView/hero.vue';
@@ -30,8 +26,8 @@ import bottomcard from '@/components/HomeView/bottomcard.vue';
 import logoarea from '@/components/HomeView/logoarea.vue';
 import infoboxes from '@/components/HomeView/infoboxes.vue';
 import additionalinfo from '@/components/HomeView/additionalinfo.vue';
+import outerim from '@/components/All/outerim.vue';
 </script>
-
 
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
@@ -39,95 +35,78 @@ import additionalinfo from '@/components/HomeView/additionalinfo.vue';
 .body {
   display: flex;
   align-items: center;
-  padding: 1%; /* Adjusted padding for better responsiveness */
-  min-height: 100vh; /* Ensure the body takes at least full viewport height */
+  justify-content: center;
+  margin: auto;
+  padding: 1%;
+  min-height: 100vh;
   flex-direction: column;
+  overflow-x: hidden;
+  z-index: 1; /* Ensure it is above outerim */
 }
 
 h1, h2 {
   color: $primary-yellow;
   font-weight: 600;
   letter-spacing: 3px;
-  font-size: 2.5rem; /* Use relative units for better scaling */
+  font-size: 2.5rem;
   text-align: center;
 }
 
-.outerim {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding-top: 42%;
-  padding-bottom: 30%;
-  max-width: 1300px; /* Max width for better layout control */
-  margin-top: -48%;
-  border: 10px outset $primary-yellow;
-  background-color: $primary-purple;
-  --notchSize: 15px;
-  clip-path: polygon(
-    0% var(--notchSize), 
-    var(--notchSize) 0%, 
-    calc(100% - var(--notchSize)) 0%, 
-    100% var(--notchSize), 
-    100% calc(100% - var(--notchSize)), 
-    calc(100% - var(--notchSize)) 100%, 
-    var(--notchSize) 100%, 
-    0% calc(100% - var(--notchSize))
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-position{
+.hero-position {
   padding-top: 5%;
-  width: 120%;
-  max-width: 1500px; /* Max width for better layout control */
+  width: 100%;
+  max-width: 1500px;
   z-index: 1;
 }
 
-.cirkelarea{
+.cirkelarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
-  margin-top: -4%;
+  margin-top: -8%;
   padding: 2%;
+  z-index: 1;
 }
 
 .boxcontent {
-  padding: 2rem; /* Adjusted padding for better spacing */
+  padding: 2rem;
   width: 100%;
-  max-width: 1000px; /* Max width for better layout control */
+  max-width: 1100px;
+  z-index: 1;
 }
 
-
-.bottom-position{
-  width: 120%;
-  max-width: 1500px; /* Max width for better layout control */
-  z-index: 0;
-  margin-top: -25%;
-  padding-bottom: 8%;
+.bottom-position {
+  padding-top: 5%;
+  width: 100%;
+  max-width: 1500px;
+  z-index: 1;
 }
 
-
-@media (max-width: 768px) {
-  .h1, .h2 {
-    font-size: 2rem; /* Smaller font size on mobile */
+@media (max-width: 1600px) {
+  .body {
+    padding-left: 5%;
+    padding-right: 5%;
   }
-  
+  .bottom-position {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 800px) {
+  h1, h2 {
+    font-size: 2rem;
+  }
+
   .outerim {
-    --notchSize: 10px; /* Smaller notch size on mobile */
+    --notchSize: 10px;
+  }
+
+  .bottom-position {
+    margin-top: 10%;
+  }
+
+  .cirkelarea {
+    margin-top: -10%;
   }
 }
-
-
-.mist {
-  position: absolute; /* Position the dark mist overlay absolute to cover the body */
-  top: -20%;
-  left: 0;
-  width: 100%;
-  min-height: 320vh;
-  background: linear-gradient(top to , transparent 70%, black 200%);
-}
-  
 </style>

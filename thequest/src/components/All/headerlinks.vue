@@ -1,32 +1,30 @@
 <template>
-  <div>
-    <header class="sticky-header">
-      <router-link to="/" class="logo" @mouseover="logoHover(true)" @mouseleave="logoHover(false)">
-        <h1 class="logo">{{ brandName }}</h1>
-        <hr class="vertical-line" :class="{ 'vertical-line-hover': isLogoHovered }">
-        <div class="additional-info">
-          <span>{{ eventDate }}</span>
-          <span>{{ eventLocation }}</span>
-        </div>
-      </router-link>
-      
-      <nav class="navbar">  
-        <div class="navigation-links">
-          
-          <router-link
-            v-for="(link, index) in navigationLinks"
-            :key="index"
-            :to="link.path"
-            class="nav-link"
-          >{{ link.text }}</router-link>
-        </div>
-        <!-- button to buy tickets -->
-        <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)"> 
-          <a href="tickets">{{ ticketText }}</a>
-        </div>
-      </nav>
-    </header>
-  </div>
+  <header class="sticky-header">
+    <router-link to="/" class="logo" @mouseover="logoHover(true)" @mouseleave="logoHover(false)">
+      <h1 class="logo">{{ brandName }}</h1>
+      <hr class="vertical-line" :class="{ 'vertical-line-hover': isLogoHovered }">
+      <div class="additional-info">
+        <span>{{ eventDate }}</span>
+        <span>{{ eventLocation }}</span>
+      </div>
+    </router-link>
+    
+    <nav class="navbar">  
+      <div class="navigation-links">
+        
+        <router-link
+          v-for="(link, index) in navigationLinks"
+          :key="index"
+          :to="link.path"
+          class="nav-link"
+        >{{ link.text }}</router-link>
+      </div>
+      <!-- button to buy tickets -->
+      <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)"> 
+        <a href="tickets">{{ ticketText }}</a>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script setup>
@@ -34,7 +32,7 @@ import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
 const brandName = ref("QUEST");
-const eventDate = ref('15 - 16 .Sep 2024');
+const eventDate = ref('14 .Sep 2024');
 const eventLocation = ref('Esbjerg torvet');
 const ticketText = ref ('Køb billet')
 
@@ -42,19 +40,22 @@ const navigationLinks = ref([
   { path: '/', text: 'QUEST' },
   { path: '/About', text: 'GALLERI'}
 ]);
-
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
 .sticky-header {
+  position: -webkit-sticky; /* For Safari */
   position: sticky;
-  top: 0;
-  background-color: transparent;   
+  top: 0; /* Stick the header to the top */
   display: flex;
-  z-index: 2;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  z-index: 3;
 }
+
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
@@ -91,9 +92,8 @@ h1, a {
 
 .btn{
   border-radius: 20px;
-  padding: 1.2%;
-  width: auto;
-  height: 50%;
+  padding: 1%;
+  width: max-content;
   display: flex;
   align-items: center;
   margin-left: 1%;
@@ -104,7 +104,7 @@ h1, a {
 .navbar {
   display: flex;
   justify-content: flex-end;
-  width: 75%;
+  width: 70%;//figure this one out
 }
 
 .nav-link {
@@ -112,6 +112,7 @@ h1, a {
   color: $primary-yellow;
   text-decoration: none;
   font-size: 20px;
+  font-weight: 900;
 }
 
 .navigation-links {

@@ -59,6 +59,11 @@ const cards = ref([
 .container {
   text-align: center;
   color: $primary-yellow;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+
 }
 
 .card {
@@ -69,8 +74,9 @@ const cards = ref([
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 3rem;
+  margin: 2rem;
   background-color: transparent;
+ 
 }
 
 
@@ -98,6 +104,19 @@ img {
   margin-top: -5%;
   animation: moveUp ease-in-out 0.5s; 
 }
+
+
+@media (max-width: 800px) {
+    .row{
+      flex-direction: column;
+}
+.card{
+  width: 180%;
+
+}
+
+}
+
 
 @keyframes moveUp {
   0% {

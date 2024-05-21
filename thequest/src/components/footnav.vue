@@ -41,7 +41,7 @@ const navigationLinks = ref([
 .position {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure it takes the full viewport height */
+  min-height: 80vh; /* Ensure it takes the full viewport height */
 }
 
 .footer {
