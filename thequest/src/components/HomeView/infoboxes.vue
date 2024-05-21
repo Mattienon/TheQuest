@@ -4,7 +4,7 @@
         <!-- First Card -->
         <div class="col">
           <div class="card card1">
-            <h1>Mød karakterende</h1>
+            <h1>Karakterene</h1>
             <div class="card-body">
               <h2 class="card-title">{{ currentContent1.title }}</h2>
               <p class="card-text">{{ currentContent1.content }}</p>
@@ -47,7 +47,8 @@
         contentOptions2: [
           { title: 'Hvad er det', content: 'Ruten', img: 'path_to_img4' },
           { title: 'Tid & sted', content: 'Blablabla', img: 'path_to_img5' },
-          { title: 'Andet', content: 'Noget andet', img: 'path_to_img6' }
+          { title: 'Trailer', content: '', img: 'path_to_img6' },
+          { title: 'Pakkeløsning', content: '', img: 'path_to_img6' },
         ],
         currentContent1: {},
         currentContent2: {}

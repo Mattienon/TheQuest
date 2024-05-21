@@ -2,7 +2,7 @@
     <!-- nav area for sticky navbar -->
  
     <headerlinks />
-    <drageanimation/>
+   
     <particleeffect />
     <main>   
       <shadowtree />
