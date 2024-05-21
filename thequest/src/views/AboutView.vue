@@ -22,7 +22,7 @@ import outerim from '@/components/All/outerim.vue';
 
 @media (max-width: 899px) {
   .outerim {
-    min-height: 310vh;
+    min-height: 320vh;
     width: 85%;
   }
   }

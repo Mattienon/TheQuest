@@ -5,7 +5,7 @@
         <h1>Velkommen til Questen</h1>
       </div>
       <div class="cardcontent">
-        <h2>Kan du løse gåderne?</h2>
+        <Particleeffect/>
         <p>Fantasy Festival Quest i samabejde med Dystopia</p>
         <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)">
           <a href="#" role="button" @click.prevent="buyTicket"><span>Køb billet</span></a>
@@ -16,6 +16,8 @@
 </template>
 
 <script setup>
+import Particleeffect from '../HomeView/countDown.vue';
+
 const buyTicket = () => {
   // Implement logic to handle ticket purchase
   console.log("Ticket purchase logic goes here");

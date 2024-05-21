@@ -10,8 +10,8 @@
   @import '@/assets/hexcolors.scss';
   
   .video-container {
-    width: 400px; /* Set the width of the circle */
-    height: 400px; /* Set the height of the circle */
+    width: 500px; /* Set the width of the circle */
+    height: 500px; /* Set the height of the circle */
     border-radius: 50%; /* Make the container circular */
     overflow: hidden; /* Ensure the video fits within the circle */
     display: flex;

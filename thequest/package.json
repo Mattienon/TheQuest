@@ -11,8 +11,10 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@iconify/vue": "^4.1.2",
     "animejs": "^3.2.2",
     "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
     "sass": "^1.76.0",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"

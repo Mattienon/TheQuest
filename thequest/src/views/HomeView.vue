@@ -38,6 +38,7 @@ import outerim from '@/components/All/outerim.vue';
   justify-content: center;
   margin: auto;
   padding: 1%;
+  margin-bottom: -20%;
   min-height: 100vh;
   flex-direction: column;
   overflow-x: hidden;
@@ -55,7 +56,7 @@ h1, h2 {
 .hero-position {
   padding-top: 5%;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
   z-index: 1;
 }
 
@@ -78,8 +79,13 @@ h1, h2 {
 .bottom-position {
   padding-top: 5%;
   width: 100%;
-  max-width: 1500px;
+  max-width: 1700px;
   z-index: 1;
+  transition: transform 0.3s;/* Add transition for microinteraction */
+}
+
+.bottom-position:hover {
+  transform: scale(1.02);
 }
 
 @media (max-width: 1600px) {
@@ -106,7 +112,7 @@ h1, h2 {
   }
 
   .cirkelarea {
-    margin-top: -10%;
+    margin-top: -18%;
   }
 }
 </style>

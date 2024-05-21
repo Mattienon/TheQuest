@@ -60,20 +60,25 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import '@/assets/hexcolors.scss';
+
 .countdown-container {
   text-align: center;
+  background-color: $secondary-purple;
+  // background: linear-gradient(to bottom, $secondary-purple 80%, $primary-purple 0%);
+
 }
 
 .countdown-title {
   font-size: 36px;
-  color: yellow;
+  color: $primary-yellow; /* Ensure this matches the variable name in your SCSS file */
 }
 
 .countdown-segment {
   margin-right: 10px;
   font-size: xx-large;
   font-weight: bolder;
-  color: green;
+  color: $primary-green; /* Ensure this matches the variable name in your SCSS file */
 }
 </style>

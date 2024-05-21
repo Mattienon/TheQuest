@@ -42,4 +42,10 @@ const scrollToTop = () => {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 800px) {
+  .scroll-to-top{
+    display: none;
+  }
+  }
+
 </style>

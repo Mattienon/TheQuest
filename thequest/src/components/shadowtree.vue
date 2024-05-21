@@ -41,8 +41,8 @@ img {
 
 .right-tree {
   width: 50%;
-  top: 50%;
+  top: 60%;
   right: -13%;
-  transform: rotate(250deg) scaleY(1); /* Flip the image horizontally */
+  transform: rotate(-90deg) scaleY(1); /* Flip the image horizontally */
 }
 </style>

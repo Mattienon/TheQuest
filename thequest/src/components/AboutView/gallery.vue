@@ -7,6 +7,7 @@
           <div class="feather-border">
             <img :src="item.imageUrl" :alt="item.alt">
           </div>
+          <br>
           <p>{{ item.text }}</p>
         </div>
       </div>

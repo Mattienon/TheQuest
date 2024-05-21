@@ -9,7 +9,7 @@
     
     <div class="whiteframe">
       <div class="navigation-links">
-        <span class="copyright">@Copyright Fantasy Festival 2024</span>
+        <span class="copyright">@Copyright Quest 2024</span>
         <RouterLink
           v-for="(link, index) in navigationLinks"
           :key="index"
@@ -41,7 +41,7 @@ const navigationLinks = ref([
 .position {
   display: flex;
   flex-direction: column;
-  min-height: 80vh; /* Ensure it takes the full viewport height */
+  min-height: 100vh; /* Ensure it takes the full viewport height */
 }
 
 .footer {
@@ -50,17 +50,19 @@ const navigationLinks = ref([
   flex-direction: column;
   background-color: $primary-green;
   position: relative;
-  bottom: 0;
   /* Clip only the bottom 20px */
-  clip-path: inset(-100% 0px 0px 0px)
+  clip-path: inset(-100% 0px 0px 0px);
   
+}
+p{
+  color: black;
+  font-weight: 600;
 }
 
 .greenfoot {
   width: 90%;
   padding-left: 5%;
   margin-top: 3%;
-
 }
 
 // copyright & privacy policy footer element
@@ -72,7 +74,7 @@ const navigationLinks = ref([
 
 .navigation-links {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding: 8px 0;
 }
 
@@ -81,7 +83,6 @@ const navigationLinks = ref([
   text-decoration: none;
   display: flex;
   justify-content: flex-end;
-  padding-left: 8%;
 }
 
 .title {
@@ -96,15 +97,53 @@ const navigationLinks = ref([
   margin-bottom: 1%;
   background-color: $primary-yellow;
   border: none;
+  color: black;
+  font-weight: 900;
 }
 
 // footer image with raven
 .footerimg {
   width: 380px;
   position: absolute;
-  right: 8%;
+  right: 5%;
   bottom: 0%;
   z-index: 1;
+  pointer-events: none;
+}
+
+
+@media (max-width: 800px) {
+  .footerimg{
+    width: 250px;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+  }
+
+.btn {
+  display: flex;
+  align-items: flex-start;
+  border-radius: 50px;
+  width: 40%;
+  margin-bottom: 1%;
+}
+.greenfoot {
+  width: 90%;
+  padding-left: 3%;
+  margin-top: 10%;
+}
+
+.whiteframe {
+  background-color: white;
+  text-align: center;
+  margin: 1rem;
+  justify-content: flex-start;
+}
+
+p{
+  display: none;
+}
+
 }
 
 </style>

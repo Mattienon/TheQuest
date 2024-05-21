@@ -93,11 +93,11 @@ const submitForm = () => {
 }
 
 .signup-form button:hover {
-  background-color: lighten($primary-purple, 10%);
+  background-color: lighten($primary-yellow, 2%);
 }
 
 .success-message {
-  color: green;
+  color: black;
   margin-top: 10px;
 }
 </style>

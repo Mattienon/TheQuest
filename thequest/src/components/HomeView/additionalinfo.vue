@@ -46,6 +46,7 @@ const cards = [
 .container {
   padding: 20px;
   text-align: center;
+  width: 85%;
 }
 
 .row {
@@ -61,7 +62,7 @@ const cards = [
   margin-bottom: 1rem; /* Space between rows */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .col {
     flex: 1 1 calc(50% - 1rem); /* Two columns layout on smaller screens */
   }

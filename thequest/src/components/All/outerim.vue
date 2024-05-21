@@ -21,8 +21,8 @@ $notchSize: 15px;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 75%;
-  min-height: 270vh;
+  width: 80%;
+  min-height: 280vh;
   z-index: -1;
   border: 10px outset $primary-yellow;
   background: linear-gradient(to bottom, $primary-purple 70%, $primary-green 95%);
@@ -38,10 +38,10 @@ $notchSize: 15px;
   );
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .outerim {
     min-height: 425vh;
-    width: 85%;
+    width: 90%;
   }
 }
 </style>
