@@ -38,17 +38,21 @@
   export default {
     name: 'MyComponent',
     data() {
+      
       return {
         contentOptions1: [
           { title: 'Malice', content: 'Ruten', img: 'path_to_img1' },
-          { title: 'rfjroeirj', content: 'Blablabla', img: 'path_to_img2' },
-          { title: 'ifheohrik', content: 'Noget andet', img: 'path_to_img3' }
+          { title: 'Gnisten', content: 'Blablabla', img: 'path_to_img2' },
+          { title: 'Arkivaren', content: 'Noget andet', img: 'path_to_img3' },
+          { title: 'Troldmand', content: 'Blablabla', img: 'path_to_img2' },
+          { title: 'Havfrue', content: 'Noget andet', img: 'path_to_img3' }
         ],
         contentOptions2: [
-          { title: 'Hvad er det', content: 'Ruten', img: 'path_to_img4' },
-          { title: 'Tid & sted', content: 'Blablabla', img: 'path_to_img5' },
+          { title: 'Hvad er det', content: 'Questen er et oplevesesløb. Når tusmørket begynder at sænke sig over Esbjerg, skrues sværhedsgraden i AftenQuesten op. Nu skal der virkelig tænkes kreativt og løses opgaver, der kræver både mod, samarbejde og snilde for at I kan gennemføre questen og redde Esbjerg. Er du vild med at løse gåder og knække koder, så må du ikke snyde dig selv for denne ultimative oplevelse. Vi sender dig og vennerne ud på jeres ultimative eventyr i Esbjergs gader og stræder. Her vil I blive nødt til at samarbejde og udtænke nye løsninger for at gennemføre AftenQuesten.', img: 'path_to_img4' },
+          { title: 'Tid & sted', content: 'Vi mødes på Torvet i Esbjerg. Dette går løs fra kl 18.00-22:30', img: 'path_to_img5' },
           { title: 'Trailer', content: '', img: 'path_to_img6' },
-          { title: 'Pakkeløsning', content: '', img: 'path_to_img6' },
+          { title: 'Overnatning', content: 'Overnatningsmuligheder: ', img: 'path_to_img6' },
+          { title: 'Transport', content: ' Togforbindelser:', img: 'path_to_img6' },
         ],
         currentContent1: {},
         currentContent2: {}
