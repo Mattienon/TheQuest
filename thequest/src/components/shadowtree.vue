@@ -8,8 +8,8 @@
 
 <script setup>
 // Dynamically import the images
-import leftTreeImage from '../assets/Images/treebranch.png';
-import rightTreeImage from '../assets/Images/treebranch.png';
+import leftTreeImage from '../assets/Images/treebranch.svg';
+import rightTreeImage from '../assets/Images/treebranch.svg';
 
 const leftTreeSrc = leftTreeImage;
 const rightTreeSrc = rightTreeImage;
@@ -20,28 +20,29 @@ const rightTreeSrc = rightTreeImage;
   position: absolute;
   overflow-x: hidden;
   width: 100%;
-  height: 200vh; /* Adjust the min-height as necessary to ensure the trees are fully visible */
+  height: 260vh; /* Adjust the min-height as necessary to ensure the trees are fully visible */
   pointer-events: none; /* Ensures the page itself doesn't block interactions */
 }
 
 img {
-  width: 100%;
-  transform: rotate(105deg);
-  opacity: 0.6;
+
+  opacity: 0.3;
   position: absolute;
   z-index: 3; /* Lower z-index to ensure it's behind other elements */
   pointer-events: none; /* Ensures the image doesn't block interactions */
 }
 
-.left-tree {
-  top: 25%;
-  left: -50%;
+.left-tree {  
+  width: 60%;
+  top: 18%;
+  left: -20%;
+  transform: rotate(60deg);
 }
 
 .right-tree {
-  width: 80%;
-  top: 44%;
-  right: -38%;
-  transform: rotate(78deg) scaleY(-1); /* Flip the image horizontally */
+  width: 50%;
+  top: 50%;
+  right: -13%;
+  transform: rotate(250deg) scaleY(1); /* Flip the image horizontally */
 }
 </style>
