@@ -17,6 +17,8 @@
 <script>
 import CardComponent from './CardComponent.vue';
 import card1 from '@/assets/Images/elf.jpg'
+import card2 from '@/assets/Images/bar.jpg'
+import card3 from '@/assets/Images/aktivitet.jpg'
 
 export default {
   name: 'MainComponent',
@@ -27,7 +29,7 @@ export default {
     return {
       cards: [
         {
-          imgSrc: card1,
+          imgSrc: card2,
           title: 'Bar & By',
           description: 'Efter din Questen åbner dronning Louise drinks der smager af eventyr '
         },
@@ -37,8 +39,8 @@ export default {
           description: 'This is the description for card 2.'
         },
         {
-          imgSrc: card1,
-          title: 'Noget Tredje',
+          imgSrc: card3,
+          title: 'Aktiviteter',
           description: 'This is the description for card 3.'
         }
       ]
