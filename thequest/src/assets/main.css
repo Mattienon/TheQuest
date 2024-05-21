@@ -4,12 +4,10 @@
 #app {
   margin: 0 auto;
   font-weight: normal;
-
 }
 /* fonts */
 h1, h2, h3, h4, a{
   font-family: "Sedan SC", serif;
-  color: #DBAF6F;
 }
 
 span{

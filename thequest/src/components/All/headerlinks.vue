@@ -1,7 +1,7 @@
 <template>
   <header class="sticky-header">
     <router-link to="/" class="logo" @mouseover="logoHover(true)" @mouseleave="logoHover(false)">
-      <h1 class="logo">{{ brandName }}</h1>
+      <h1>{{ brandName }}</h1>
       <hr class="vertical-line" :class="{ 'vertical-line-hover': isLogoHovered }">
       <div class="additional-info">
         <span>{{ eventDate }}</span>
@@ -11,7 +11,6 @@
     
     <nav class="navbar">  
       <div class="navigation-links">
-        
         <router-link
           v-for="(link, index) in navigationLinks"
           :key="index"
@@ -19,7 +18,7 @@
           class="nav-link"
         >{{ link.text }}</router-link>
       </div>
-      <!-- button to buy tickets -->
+      <!-- Button to buy tickets -->
       <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)"> 
         <a href="tickets">{{ ticketText }}</a>
       </div>
@@ -28,34 +27,44 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
+import { RouterLink } from 'vue-router';
+import { ref } from 'vue';
 
 const brandName = ref("QUEST");
 const eventDate = ref('14 .Sep 2024');
 const eventLocation = ref('Esbjerg torvet');
-const ticketText = ref ('Køb billet')
+const ticketText = ref('Køb billet');
 
 const navigationLinks = ref([
   { path: '/', text: 'QUEST' },
-  { path: '/About', text: 'GALLERI'}
+  { path: '/About', text: 'GALLERI' }
 ]);
+
+const isLogoHovered = ref(false);
+
+function logoHover(value) {
+  isLogoHovered.value = value;
+}
+
+const isButtonHovered = ref(false);
+
+function buttonHover(value) {
+  isButtonHovered.value = value;
+}
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
 .sticky-header {
-  position: -webkit-sticky; /* For Safari */
   position: sticky;
-  top: 0; /* Stick the header to the top */
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
   z-index: 3;
 }
-
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s;
@@ -66,8 +75,8 @@ const navigationLinks = ref([
 }
 
 .logo {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
 }
 
 h1, a {
@@ -78,19 +87,19 @@ h1, a {
 
 .vertical-line {
   border-left: 2px solid $primary-yellow;
-  height: 35px; 
-  margin-left: 10px; 
+  height: 35px;
+  margin-left: 10px;
 }
 
 .additional-info {
   line-height: 20px;
   display: flex;
   flex-direction: column;
-  margin-left: 10px; 
+  margin-left: 10px;
   min-width: 50%;
 }
 
-.btn{
+.btn {
   border-radius: 20px;
   padding: 1%;
   width: max-content;
@@ -104,7 +113,7 @@ h1, a {
 .navbar {
   display: flex;
   justify-content: flex-end;
-  width: 70%;//figure this one out
+  width: 70%; // You can adjust this value as needed
 }
 
 .nav-link {
@@ -120,14 +129,14 @@ h1, a {
 }
 
 .vertical-line-hover {
-  border-color: lighten($primary-yellow, 20%); 
+  border-color: lighten($primary-yellow, 20%);
 }
 
 .logo:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .btn:hover {
-  background-color: lighten($primary-purple, 10%); 
+  background-color: lighten($primary-purple, 10%);
 }
 </style>

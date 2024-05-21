@@ -1,20 +1,16 @@
 <template>
-    <!-- nav area for sticky navbar -->
- 
-    <headerlinks />
-   
-    <particleeffect />
-    <main>   
-      <shadowtree />
-      <transition name="fade" mode="out-in">
-        <router-view />
-      </transition>
-      <totheTOP/>
-    </main>
-    
-    <!-- footer comp -->
-    <footnav />
-  </template>
+  <headerlinks />
+  <particleeffect />
+  <main>
+    <shadowtree />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+    <totheTOP />
+  </main>
+  <footnav />
+</template>
+
   
   <script setup>
   import { RouterView } from 'vue-router';
@@ -22,7 +18,6 @@
   import headerlinks from '@/components/All/headerlinks.vue';
   import shadowtree from '@/components/shadowtree.vue';
   import totheTOP from './components/All/totheTOP.vue';
-  import drageanimation from './components/All/drageanimation.vue';
   </script>
   
   <style lang="scss" scoped>

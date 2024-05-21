@@ -66,18 +66,14 @@ const navigationLinks = ref([
 // copyright & privacy policy footer element
 .whiteframe {
   background-color: white;
-  width: 90%;
-  display: flex;
-  margin: auto;
-  padding: 10px;
-  margin-bottom: 2%;
+  text-align: center;
+  margin: 1rem;
 }
 
-.navigation-links {  
-  width: 100%;
+.navigation-links {
   display: flex;
-  justify-content: center;
-  
+  justify-content: space-around;
+  padding: 8px 0;
 }
 
 .footer-link {

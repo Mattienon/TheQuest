@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <h1>Extra aktiviteter</h1>
-    <p>Oplev extra aktiviteter i forlængelse af din Quest</p>
+    <p>Oplev ekstra aktiviteter i forlængelse af din Quest</p>
     <div class="row">
       <div class="col" v-for="(card, index) in cards" :key="index">
         <div class="card h-100">
-          <img :src="card.imgSrc" class="card-img-top" alt="Card image">
+          <img :src="card.imgSrc" class="card-img-top" :alt="card.title + ' image'">
           <div class="card-body">
             <h5 class="card-title">{{ card.title }}</h5>
             <p class="card-text">{{ card.description }}</p>
@@ -67,7 +67,7 @@ const cards = [
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 800px) {
   .col {
     flex: 1 1 calc(100% - 1rem); /* Single column layout on extra small screens */
   }
@@ -76,6 +76,15 @@ const cards = [
 .card {
   margin: 10px;
   border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1; /* Ensure the card body takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-img-top {
