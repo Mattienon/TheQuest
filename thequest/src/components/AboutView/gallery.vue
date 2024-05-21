@@ -17,34 +17,37 @@
 <script setup>
 import { ref } from 'vue'
 
-import raven from '@/assets/Images/raven.svg';
-import Malice from '@/assets/Images/Malice.jpg';
+import violin from '@/assets/Images/violin.jpg';
+import skyd from '@/assets/Images/skyd.jpg';
 import elf from '@/assets/Images/elf.jpg';
+import fans from '@/assets/Images/fans.jpg';
+import leg from '@/assets/Images/leg.jpg';
+import musik from '@/assets/Images/musik.jpg';
 
 const cards = ref([
   {
-    imageUrl: Malice,
-    text: 'This is a paragraph inside the first column.'
+    imageUrl: violin,
+    text: 'Hyggelig musik bliver spillet og hygget om.'
   },
   {
-    imageUrl: raven,
-    text: 'This is a paragraph inside the second column.'
-  },
-  {
-    imageUrl: elf,
-    text: 'This is a paragraph inside the second column.'
-  },
-  {
-    imageUrl: Malice,
-    text: 'This is a paragraph inside the first column.'
-  },
-  {
-    imageUrl: raven,
-    text: 'This is a paragraph inside the second column.'
+    imageUrl: skyd,
+    text: 'Inkluderende samvær, og en masse at se på.'
   },
   {
     imageUrl: elf,
-    text: 'This is a paragraph inside the second column.'
+    text: 'Smukke kostumer og skuespillere.'
+  },
+  {
+    imageUrl: fans,
+    text: 'Hygge steder man kan spise mad og få noget godt at drikke.'
+  },
+  {
+    imageUrl: leg,
+    text: 'Aktiviter til alle aldre.'
+  },
+  {
+    imageUrl: musik,
+    text: 'Mere musik på den opstillede scene.'
   },
   // Add more card items as needed
 ]);
