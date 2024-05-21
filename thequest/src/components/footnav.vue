@@ -1,4 +1,5 @@
 <template> 
+<div class="position">
   <footer class="footer">
     <div class="greenfoot">
       <p class="title">Fantasy Festival Quest</p>
@@ -22,6 +23,7 @@
       <img src="@/assets/Images/raven.svg" alt="Raven Image">
     </div>
   </footer>
+  </div>
 </template>
 
 <script setup>
@@ -36,12 +38,19 @@ const navigationLinks = ref([
 
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
+.position {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure it takes the full viewport height */
+}
 
 .footer {
+  margin-top: auto; /* Pushes the footer to the bottom */
   display: flex;
   flex-direction: column;
   background-color: $primary-green;
   position: relative;
+  bottom: 0;
   /* Clip only the bottom 20px */
   clip-path: inset(-100% 0px 0px 0px)
   
