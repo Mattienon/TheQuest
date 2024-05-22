@@ -1,6 +1,6 @@
 <template>
   <div class="countdown-container">
-    <h1 class="countdown-title">Countdown Timer</h1>
+    <h1 class="countdown-title"></h1>
     <div class="countdown-time">
       <span v-if="days" class="countdown-segment">{{ days }}d </span>
       <span class="countdown-segment">{{ hours }}h </span>
@@ -65,20 +65,22 @@ export default {
 
 .countdown-container {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -25%;
   background-color: $secondary-purple;
+  border: solid 6px $primary-yellow; 
+  padding: 8%;
+  width: 150%;
   // background: linear-gradient(to bottom, $secondary-purple 80%, $primary-purple 0%);
 
 }
 
-.countdown-title {
-  font-size: 36px;
-  color: $primary-yellow; /* Ensure this matches the variable name in your SCSS file */
-}
-
 .countdown-segment {
   margin-right: 10px;
-  font-size: xx-large;
+  font-size: 50px;
   font-weight: bolder;
-  color: $primary-green; /* Ensure this matches the variable name in your SCSS file */
+  color: $primary-green; /* countdown changes the box sizing */
 }
 </style>

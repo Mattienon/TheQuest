@@ -41,7 +41,7 @@ const navigationLinks = ref([
 .position {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure it takes the full viewport height */
+  min-height: 150vh; /* Ensure it takes the full viewport height */
 }
 
 .footer {
@@ -52,6 +52,7 @@ const navigationLinks = ref([
   position: relative;
   /* Clip only the bottom 20px */
   clip-path: inset(-100% 0px 0px 0px);
+  z-index: 3;
   
 }
 p{

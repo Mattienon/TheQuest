@@ -10,26 +10,27 @@
     </router-link>
   
     <nav class="navbar">
+       <button class="btn btn-secondary dropdown-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse">
+        <icon icon="mdi-menu" class="menu-icon"></icon>
+      </button>
       <div class="collapse navbar-collapse justify-content-start align-items-center" id="navbarCollapse">
-         <div class="navigation-links">
+          <div class="social-links">
+          <a v-for="(socialLink, index) in socialMediaLinks" :key="index" :href="socialLink.url" class="social-link">
+            <icon :icon="socialLink.icon" class="social-icon"></icon>
+          </a>
+      </div><div class="navigation-links">
           <router-link v-for="(link, index) in navigationLinks" :key="index" :to="link.path" class="nav-link">{{ link.text }}</router-link>
         </div>
  <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)">
           <a href="https://www.universe.com/events/fantasy-quest-aftenquest-tickets-2PCHR4">{{ ticketText }}</a>
         </div>
-   <div class="social-links">
-          <a v-for="(socialLink, index) in socialMediaLinks" :key="index" :href="socialLink.url" class="social-link">
-            <icon :icon="socialLink.icon" class="social-icon"></icon>
-          </a>
-      </div>
+  
         </div> 
       <!-- bottom o fthe collape^^ -->
        
       
      
-      <button class="btn btn-secondary dropdown-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse">
-        <icon icon="mdi-menu" class="menu-icon"></icon>
-      </button>
+     
     </nav>
   </header>
   </template>
@@ -54,11 +55,6 @@
     { path: '/About', text: 'GALLERI' }
   ]);
   
-  const isButtonHovered = ref(false);
-  
-  function buttonHover(value) {
-    isButtonHovered.value = value;
-  }
   </script>
   
   
@@ -72,8 +68,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 15px 25px;
   z-index: 3;
+  background: linear-gradient(to bottom, $primary-purple, rgba(0, 0, 0, 0.5)); /* Gradient from yellow to black with 0.5 opacity */
 }
 
 .logo {
@@ -106,7 +103,8 @@ h1, a {
   min-width: max-content;
   display: flex;
   align-items: center;
-  margin-left: 1%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
   background-color: $primary-purple;
   border: none;
 }

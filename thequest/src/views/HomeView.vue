@@ -38,8 +38,7 @@ import outerim from '@/components/All/outerim.vue';
   justify-content: center;
   margin: auto;
   padding: 1%;
-  margin-bottom: -20%;
-  min-height: 100vh;
+  margin-bottom: -50%;
   flex-direction: column;
   overflow-x: hidden;
   z-index: 1; /* Ensure it is above outerim */

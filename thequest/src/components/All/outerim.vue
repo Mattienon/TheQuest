@@ -38,9 +38,16 @@ $notchSize: 15px;
   );
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .outerim {
-    min-height: 425vh;
+    min-height: 200vh;
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .outerim {
+    min-height: 525vh;
     width: 90%;
   }
 }

@@ -2,14 +2,13 @@
   <div>
     <div class="card" @mouseover="cardHover(true)" @mouseleave="cardHover(false)">
       <div class="cardtitle">
-        <h1>Velkommen til Questen</h1>
+        <h1>Questen starter om</h1>
       </div>
       <div class="cardcontent">
         <Particleeffect/>
-        <p>Fantasy Festival Quest i samabejde med Dystopia</p>
-        <div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)">
-          <a href="#" role="button" @click.prevent="buyTicket"><span>Køb billet</span></a>
-        </div>
+        <!-- /<div class="btn btn-dark" @mouseover="buttonHover(true)" @mouseleave="buttonHover(false)"> -->
+          <!-- <a href="#" role="button" @click.prevent="buyTicket"><span>Køb billet</span></a> -->
+        <!-- </div> -->
       </div>
     </div>
   </div>
@@ -28,8 +27,9 @@ const buyTicket = () => {
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
-h2 {
+h1 {
   padding-bottom: 1rem;
+  color: $primary-yellow;
 }
 
 a {
