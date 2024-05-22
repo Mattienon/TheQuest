@@ -15,39 +15,31 @@ import { ref, computed, onMounted } from 'vue';
 
 export default {
   setup() {
-    // Calculate the target date (14th of September)
     const targetDate = new Date('2024-09-14T20:30:00');
-    // Get the current date
     const currentDate = new Date();
 
-    // Ensure the target date is in the future
     if (targetDate <= currentDate) {
       console.error('Target date must be in the future.');
       return;
     }
 
-    // Calculate the time remaining in seconds
     let timeLeft = ref(Math.floor((targetDate - currentDate) / 1000));
 
-    // Method to calculate remaining time in days, hours, minutes, and seconds
     const days = computed(() => Math.floor(timeLeft.value / 86400));
     const hours = computed(() => Math.floor((timeLeft.value % 86400) / 3600));
     const minutes = computed(() => Math.floor((timeLeft.value % 3600) / 60));
     const seconds = computed(() => timeLeft.value % 60);
 
-    // Method to start the countdown
     const startTimer = () => {
       const timerInterval = setInterval(() => {
         timeLeft.value--;
         if (timeLeft.value <= 0) {
           clearInterval(timerInterval);
-          // Optionally, you can perform some action when the timer ends
           console.log('Timer ended!');
         }
       }, 1000);
     };
 
-    // Start the timer when the component is mounted
     onMounted(startTimer);
 
     return {
@@ -66,21 +58,40 @@ export default {
 .countdown-container {
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: -25%;
   background-color: $secondary-purple;
-  border: solid 6px $primary-yellow; 
-  padding: 8%;
-  width: 150%;
-  // background: linear-gradient(to bottom, $secondary-purple 80%, $primary-purple 0%);
+  border: solid 6px $primary-yellow;
+  width: 100%;
+  margin: auto;
+  
+}
 
+.countdown-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 20px 60px;
 }
 
 .countdown-segment {
-  margin-right: 10px;
-  font-size: 50px;
-  font-weight: bolder;
-  color: $primary-green; /* countdown changes the box sizing */
+  margin: 5px;
+  font-size: 70px;
+  color: $primary-green;
+}
+
+@media (max-width: 700px) {
+  .countdown-container {
+    padding: 0;
+    margin: 0;
+  }
+  .countdown-segment {
+  margin: 0.5;
+  font-size: 13px;
+  color: $primary-green;
+}
+
 }
 </style>

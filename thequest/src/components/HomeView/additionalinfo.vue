@@ -40,13 +40,17 @@ const cards = [
 ];
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
 .container {
   padding: 20px;
   text-align: center;
   width: 85%;
+}
+h1 {
+  padding-bottom: 1rem;
+  color: $primary-yellow;
 }
 
 .row {
@@ -56,23 +60,6 @@ const cards = [
   gap: 1rem; /* Space between cards */
 }
 
-.col {
-  flex: 1 1 calc(33.333% - 1rem); /* Three columns layout */
-  box-sizing: border-box;
-  margin-bottom: 1rem; /* Space between rows */
-}
-
-@media (max-width: 1000px) {
-  .col {
-    flex: 1 1 calc(50% - 1rem); /* Two columns layout on smaller screens */
-  }
-}
-
-@media (max-width: 800px) {
-  .col {
-    flex: 1 1 calc(100% - 1rem); /* Single column layout on extra small screens */
-  }
-}
 
 .card {
   margin: 10px;
@@ -91,5 +78,26 @@ const cards = [
 .card-img-top {
   width: 100%;
   height: auto;
+}
+
+.col {
+  flex: 1 1 calc(33.333% - 1rem); /* Three columns layout */
+  box-sizing: border-box;
+  margin-bottom: 1rem; /* Space between rows */
+}
+
+@media (max-width: 1000px) {
+  .col {
+    flex: 1 1 calc(50% - 1rem); /* Two columns layout on smaller screens */
+  }
+  .container{
+    padding: 0%;
+  }
+}
+
+@media (max-width: 800px) {
+  .col {
+    flex: 1 1 calc(100% - 1rem); /* Single column layout on extra small screens */
+  }
 }
 </style>

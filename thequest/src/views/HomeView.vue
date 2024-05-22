@@ -97,7 +97,7 @@ h1, h2 {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   h1, h2 {
     font-size: 2rem;
   }
@@ -111,7 +111,7 @@ h1, h2 {
   }
 
   .cirkelarea {
-    margin-top: -18%;
+    margin-top: -20%;
   }
 }
 </style>

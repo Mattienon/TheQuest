@@ -43,6 +43,11 @@ const submitForm = () => {
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
+h1 {
+  padding-bottom: 1rem;
+  color: $primary-yellow;
+}
+
 /* Add visually hidden class for accessibility */
 .visually-hidden {
   position: absolute;
@@ -99,5 +104,12 @@ const submitForm = () => {
 .success-message {
   color: black;
   margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .signup-form {
+    width: 80%;
+    margin: auto;
+  }
 }
 </style>

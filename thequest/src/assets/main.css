@@ -9,6 +9,9 @@
 h1, h2, h3, h4, a{
   font-family: "Sedan SC", serif;
 }
+h1 {
+  color: $primary-yellow;
+}
 
 span{
   font-family: "Sedan SC", serif;

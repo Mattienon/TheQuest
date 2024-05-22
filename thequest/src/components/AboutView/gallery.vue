@@ -38,21 +38,20 @@ const cards = ref([
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
-.gallery-container {
-  text-align: center;
-  color: $primary-yellow;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
 
-  .row {
+  .row, h1 {
     display: flex;
-    flex-wrap: wrap;
+    width: 80%;
     justify-content: center;
-  }
+    margin: auto;
+    padding: 5%;
+
+  }h1 {
+    padding: 8%;
+  padding-bottom: 0rem;
+  color: $primary-yellow;
+}
+
 
   .card {
     width: 90%;
@@ -61,9 +60,10 @@ const cards = ref([
     padding: 5%;
     text-align: center;
     display: flex;
-    justify-content: center;
-    margin: 2rem;
+    margin: auto;
     background-color: transparent;
+
+  }
 
     .feather-border::before,
     .feather-border::after {
@@ -79,11 +79,11 @@ const cards = ref([
 
     img {
       width: 100%;
-      height: 300px;
+      min-height: 100px;
       object-fit: contain;
       display: block;
     }
-  }
+  
 
   .animated-heading {
     margin-top: -5%;
@@ -91,13 +91,21 @@ const cards = ref([
   }
 
   @media (max-width: 800px) {
-    .card {
-      width: 180%;
-    }
+ 
     .row{
       flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      padding: 0%;}
+      .card{
+        margin: 1rem;
+        padding: 1%;
+      }
+
+
 }
-  }
+  
 
   @keyframes moveUp {
     0% {
@@ -107,5 +115,5 @@ const cards = ref([
       transform: translateY(-5px);
     }
   }
-}
+
 </style>
