@@ -31,17 +31,17 @@ export default {
         {
           imgSrc: card2,
           title: 'Bar & By',
-          description: 'Efter din Questen åbner dronning Louise drinks der smager af eventyr '
+          description: 'Efter din Quest åbner dronning Louise op for magiske drinks, der smager af eventyr '
         },
         {
           imgSrc: card1,
           title: 'Fantasy Festival',
-          description: 'This is the description for card 2.'
+          description: 'The Quest er en del af Esbjergs berømte Fantasy Festival.'
         },
         {
           imgSrc: card3,
           title: 'Aktiviteter',
-          description: 'This is the description for card 3.'
+          description: 'Questen tager ca 1 time og derefter kan du gå ud og nyde godt af hvad Festivalen har at tilbyde.'
         }
       ]
     };
