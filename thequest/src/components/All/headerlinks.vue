@@ -10,6 +10,7 @@
     </router-link>
 
     <nav class="navbar">
+      <button class="btn btn-secondary dropdown-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse">
         <icon icon="mdi-menu" class="menu-icon"></icon>
       </button>
       <div class="collapse navbar-collapse justify-content-start align-items-center" id="navbarCollapse">
