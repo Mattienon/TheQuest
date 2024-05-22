@@ -45,13 +45,13 @@ const contentOptions1 = ref([
   { title: 'Havfrue', content: 'Noget andet', img: 'path_to_img3' }
 ]);
 
-const contentOptions2 = ref([
-  { title: 'Hvad er det', content: 'Questen er et oplevesesløb. Når tusmørket begynder at sænke sig over Esbjerg, skrues sværhedsgraden i AftenQuesten op. Nu skal der virkelig tænkes kreativt og løses opgaver, der kræver både mod, samarbejde og snilde for at I kan gennemføre questen og redde Esbjerg. Er du vild med at løse gåder og knække koder, så må du ikke snyde dig selv for denne ultimative oplevelse. Vi sender dig og vennerne ud på jeres ultimative eventyr i Esbjergs gader og stræder. Her vil I blive nødt til at samarbejde og udtænke nye løsninger for at gennemføre AftenQuesten.', img: 'path_to_img4' },
-  { title: 'Tid & sted', content: 'Vi mødes på Torvet i Esbjerg. Dette går løs fra kl 18.00-22:30', img: 'path_to_img5' },
-  { title: 'Trailer', content: '', img: 'path_to_img6' },
-  { title: 'Overnatning', content: 'Overnatningsmuligheder: ', img: 'path_to_img6' },
-  { title: 'Transport', content: ' Togforbindelser:', img: 'path_to_img6' },
-]);
+const contentOptions2 = ref ([
+          { title: 'Hvad er det', content: 'Questen er et oplevesesløb. Når tusmørket begynder at sænke sig over Esbjerg, skrues sværhedsgraden i AftenQuesten op. Nu skal der virkelig tænkes kreativt og løses opgaver, der kræver både mod, samarbejde og snilde for at I kan gennemføre questen og redde Esbjerg. Er du vild med at løse gåder og knække koder, så må du ikke snyde dig selv for denne ultimative oplevelse. Vi sender dig og vennerne ud på jeres ultimative eventyr i Esbjergs gader og stræder. Her vil I blive nødt til at samarbejde og udtænke nye løsninger for at gennemføre AftenQuesten. Questen tager ca. en time at gennemføre', img: 'path_to_img4' },
+          { title: 'Tid & sted', content: 'Vi mødes på Torvet i Esbjerg. Dette går løs fra kl 18.00-22:30. Der er mange forskellige tider i dette tidsrum. Så tøv ikke og får bestilt den tid, som passer din gruppe.', img: 'path_to_img5' },
+          { title: 'Trailer', content: '', img: 'path_to_img6' },
+          { title: 'Overnatning', content: 'I samarbejder med Cabinn Esbjerg og hotel Britania, som ligger i gåafstand fra Torvet, vil du få 10% rabat på overnatning, når du viser din Quest billet ', img: 'path_to_img6' },
+          { title: 'Transport', content: ' Der går mange togforbindelser til Esbjerg station. Stationen ligger 100 m fra Torvet, hvor Questen starter. ', img: 'path_to_img6' },
+        ]);
 
 const currentContent1 = ref({});
 const currentContent2 = ref({});
