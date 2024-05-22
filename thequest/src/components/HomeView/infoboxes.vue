@@ -41,7 +41,7 @@
       
       return {
         contentOptions1: [
-          { title: 'Malice', content: 'Præsenterer Malice', img: 'path_to_img1' },
+          { title: 'Malice', content: 'Præsenterer Malice, HEksen fra Esbjerg', img: 'path_to_img1' },
           { title: 'Gnisten', content: 'Præsenterer Gnisten', img: 'path_to_img2' },
           { title: 'Arkivaren', content: 'Præsenterer Arkivaren', img: 'path_to_img3' },
           { title: 'Troldmand', content: 'Præsenterer Troldmanden', img: 'path_to_img2' },
