@@ -38,82 +38,70 @@ const cards = ref([
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
+.row, h1 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
 
-  .row, h1 {
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    margin: auto;
-    padding: 5%;
-
-  }h1 {
-    padding: 8%;
-  padding-bottom: 0rem;
+h1 {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
   color: $primary-yellow;
 }
 
-
-  .card {
-    width: 90%;
-    height: 90%;
-    border: solid 8px $primary-yellow;
-    padding: 5%;
-    text-align: center;
-    display: flex;
-    margin: auto;
-    background-color: transparent;
-
-  }
-
-    .feather-border::before,
-    .feather-border::after {
-      content: '';
-      position: absolute;
-      top: -1px;
-      bottom: -0px;
-      left: -0px;
-      right: -0px;
-      border-radius: 0%;
-      background: radial-gradient(circle at center, transparent 50%, black 200%);
-    }
-
-    img {
-      width: 100%;
-      min-height: 100px;
-      object-fit: contain;
-      display: block;
-    }
-  
-
-  .animated-heading {
-    margin-top: -5%;
-    animation: moveUp ease-in-out 0.5s;
-  }
-
-  @media (max-width: 800px) {
- 
-    .row{
-      flex-direction: column;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      padding: 0%;}
-      .card{
-        margin: 1rem;
-        padding: 1%;
-      }
-
-
+.card {
+  width: 95%;
+  height: 95%;
+  border: solid 8px $primary-yellow;
+  padding: 2%;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  background-color: transparent;
 }
-  
 
-  @keyframes moveUp {
-    0% {
-      transform: translateY(0);
-    }
-    10% {
-      transform: translateY(-5px);
-    }
+.feather-border::before,
+.feather-border::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  bottom: -0px;
+  left: -0px;
+  right: -0px;
+  border-radius: 0%;
+  background: radial-gradient(circle at center, transparent 50%, black 200%);
+}
+
+img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: contain;
+  display: block;
+}
+
+.animated-heading {
+  margin-top: -5%;
+  animation: moveUp ease-in-out 0.5s;
+}
+
+@media (max-width: 700px) {
+  .row .col-6 {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0%;
+    margin: 0%;
   }
+}
 
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-5px);
+  }
+}
 </style>

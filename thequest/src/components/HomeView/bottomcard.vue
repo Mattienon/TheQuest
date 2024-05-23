@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="card">
       <div class="cardtitle">
         <h1>Questen er et uendeligt eventyr</h1>
@@ -17,7 +16,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script setup>
@@ -43,8 +41,8 @@ const submitForm = () => {
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
 
-h1 {
-  padding-bottom: 1rem;
+.cardtitle, .cardcontent, p {
+  padding: 1rem;
   color: $primary-yellow;
 }
 
@@ -63,13 +61,20 @@ h1 {
 
 .card {
   background-color: $light-purple;
-  height: 350px;
   outline: none;
   border: none;
   text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center; /* Align items vertically */
+  flex-direction: column; /* Ensure content stacks vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to card */
+  transition: box-shadow 0.3s ease; /* Smooth transition for shadow change */
+}
+
+.card:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
 }
 
 .signup-form {
@@ -86,6 +91,7 @@ h1 {
   padding: 10px;
   border-radius: 5px;
   border: none;
+  font-size: 1rem;
 }
 
 .signup-form button {
@@ -95,6 +101,7 @@ h1 {
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .signup-form button:hover {
@@ -107,9 +114,24 @@ h1 {
 }
 
 @media (max-width: 800px) {
-  .signup-form {
-    width: 80%;
+  .card {
+    width: 90%;
     margin: auto;
+  }
+  .signup-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardtitle h1 {
+    font-size: 1.5rem;
+  }
+  .cardcontent h2 {
+    font-size: 1.2rem;
+  }
+  .signup-form input[type="email"], .signup-form button {
+    font-size: 0.9rem;
   }
 }
 </style>

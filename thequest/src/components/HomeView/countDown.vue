@@ -2,10 +2,10 @@
   <div class="countdown-container">
     <h1 class="countdown-title"></h1>
     <div class="countdown-time">
-      <span v-if="days" class="countdown-segment">{{ days }}d </span>
-      <span class="countdown-segment">{{ hours }}h </span>
-      <span class="countdown-segment">{{ minutes }}m </span>
-      <span class="countdown-segment">{{ seconds }}s</span>
+      <p v-if="days" class="countdown-segment">{{ days }}D</p>
+      <p class="countdown-segment">{{ hours }}T</p>
+      <p class="countdown-segment">{{ minutes }}M</p>
+      <p class="countdown-segment">{{ seconds }}S</p>
     </div>
   </div>
 </template>
@@ -61,11 +61,8 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $secondary-purple;
-  border: solid 6px $primary-yellow;
   width: 100%;
   margin: auto;
-  
 }
 
 .countdown-time {
@@ -73,25 +70,36 @@ export default {
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: 20px 60px;
+  padding: 30px 50px;
 }
 
 .countdown-segment {
   margin: 5px;
-  font-size: 70px;
+  padding: 40px 20px; /* Add padding inside each segment */
+  font-size: 60px;
   color: $primary-green;
+  background-color: $light-purple; /* Background color for each segment */
+  border: solid 5px $primary-yellow; /* Border around each segment */
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to each segment */
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth hover effect */
 }
 
-@media (max-width: 700px) {
+.countdown-segment:hover {
+  transform: scale(1.1); /* Slightly increase size on hover */
+  color: $primary-yellow; /* Change text color on hover */
+  background-color: lighten($light-purple, 10%); /* Lighten background color on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+}
+
+@media (max-width: 560px) {
   .countdown-container {
     padding: 0;
     margin: 0;
   }
   .countdown-segment {
-  margin: 0.5;
-  font-size: 13px;
-  color: $primary-green;
-}
-
+    font-size: 35px;
+    padding: 20px 8px; /* Adjust padding for smaller screens */
+  }
 }
 </style>

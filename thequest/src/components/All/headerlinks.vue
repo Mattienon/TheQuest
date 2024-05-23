@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky-header">
+  <header :class="['sticky-header', { 'collapse-expanded': isCollapseExpanded }]">
     <router-link to="/" class="logo" @mouseover="logoHover(true)" @mouseleave="logoHover(false)">
       <h1>{{ brandName }}</h1>
       <hr class="vertical-line" :class="{ 'vertical-line-hover': isLogoHovered }">
@@ -10,7 +10,7 @@
     </router-link>
 
     <nav class="navbar">
-      <button class="btn btn-secondary dropdown-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse">
+      <button class="btn btn-secondary dropdown-toggle d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-expanded="false" aria-controls="navbarCollapse" @click="toggleCollapse">
         <icon icon="mdi-menu" class="menu-icon"></icon>
       </button>
       <div class="collapse navbar-collapse justify-content-start align-items-center" id="navbarCollapse">
@@ -49,7 +49,19 @@ const navigationLinks = ref([
   { path: '/', text: 'QUEST' },
   { path: '/About', text: 'GALLERI' }
 ]);
+
+const isLogoHovered = ref(false);
+const isCollapseExpanded = ref(false);
+
+const logoHover = (hover) => {
+  isLogoHovered.value = hover;
+};
+
+const toggleCollapse = () => {
+  isCollapseExpanded.value = !isCollapseExpanded.value;
+};
 </script>
+
 
 <style lang="scss" scoped>
 @import '@/assets/hexcolors.scss';
@@ -61,8 +73,13 @@ const navigationLinks = ref([
   flex-direction: column;
   align-items: center;
   padding: 10px 15px;
-  z-index: 3;
-  background: linear-gradient(to bottom, $primary-purple, rgba(0, 0, 0, 0.5));
+  z-index: 10;
+  background: linear-gradient(to bottom, $primary-purple 0%, $light-purple(20%) 20%, rgba(0, 0, 0, 0) 100%);
+  overflow-x: hidden;
+
+  &.collapse-expanded .logo {
+    display: none;
+  }
 }
 
 .logo {
@@ -93,7 +110,7 @@ h1, a {
 
 .btn {
   border-radius: 20px;
-  padding: 2px 15px;
+  padding: 0px 15px;
   background-color: $primary-purple;
   border: none;
 }
@@ -172,16 +189,22 @@ h1, a {
 }
 
 @media (max-width: 767px) {
+  .sticky-header {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .additional-info{
+    display: none;
+  }
   .navbar-collapse {
     flex-direction: column;
     align-items: center;
   }
-
   .btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 50%;
     margin: 10px auto;
   }
   .ticket-button {
@@ -191,4 +214,5 @@ h1, a {
     display: none;
   }
 }
+
 </style>
